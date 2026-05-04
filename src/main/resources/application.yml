@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Proejto-TarefasWeb
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auladb
+    username: postgres
+    password: 2809
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update

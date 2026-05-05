@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar Tarefa</title>
+</head>
+<body>
+
+<h1>Editar Tarefa</h1>
+
+<form th:action="@{/editar/{id}(id=${tarefa.id})}" method="post">
+    <label>id:</label><br>
+    <input type="text" th:value="${tarefa.id}" name="id" disabled><br><br>
+
+    <label>Descrição:</label><br>
+    <input type="text" th:value="${tarefa.descricao}" name="descricao"><br><br>
+
+    <label>Status:</label>
+    <input type="checkbox" name="ativo" th:checked="${tarefa.ativo}"><br><br>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+</body>
+</html>
